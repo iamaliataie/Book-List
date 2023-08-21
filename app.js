@@ -52,17 +52,13 @@ class UI {
     
     static showAlert(message, className){
         const messageSection = document.querySelector('#message');
-
         const messageBox = document.createElement('div');
         messageBox.classList = `alert alert-${className}`;
         messageBox.style.height = '50px';
-
         const messageText = document.createElement('p');
         messageText.innerText = message;
-
         messageBox.appendChild(messageText);
         messageSection.appendChild(messageBox);
-
         setTimeout(() => messageBox.remove() ,2000);
     }
 }
